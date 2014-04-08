@@ -11,7 +11,7 @@ class GamePlay(object):
         self.game = game
 
     def start(self):
-        if self.game.game_status == GAME_STATUS.STOP:
+        if self.game.status == GAME_STATUS.STOP:
             # run the game loop
             while True:
                 for event in pygame.event.get():
@@ -19,4 +19,4 @@ class GamePlay(object):
                         pygame.quit()
                         sys.exit()
 
-            pygame.display.update()
+                pygame.display.update()
